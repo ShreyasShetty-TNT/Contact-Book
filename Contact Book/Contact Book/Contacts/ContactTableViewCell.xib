@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="114" id="KGk-i7-Jjw" customClass="ContactTableViewCell" customModule="Contact_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile-pic" translatesAutoresizingMaskIntoConstraints="NO" id="vM5-KH-fxn">
+                        <rect key="frame" x="6" y="8" width="82" height="82"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="82" id="VAP-Q7-jTR"/>
+                            <constraint firstAttribute="width" constant="82" id="dlc-tT-Uz1"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-VO-IRb">
+                        <rect key="frame" x="96" y="8" width="246" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="James Gunior" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epi-DH-qfd">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPH-IB-32J">
+                                <rect key="frame" x="0.0" y="19.5" width="31" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="B5Y-VO-IRb" firstAttribute="top" secondItem="vM5-KH-fxn" secondAttribute="top" id="6Rr-1g-bGy"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="B5Y-VO-IRb" secondAttribute="bottom" constant="8" id="Dy5-Xz-42X"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vM5-KH-fxn" secondAttribute="bottom" constant="8" id="QiG-nA-FXH"/>
+                    <constraint firstItem="vM5-KH-fxn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="hrI-mo-G5j"/>
+                    <constraint firstAttribute="trailing" secondItem="B5Y-VO-IRb" secondAttribute="trailing" constant="8" id="nTO-zK-9yj"/>
+                    <constraint firstItem="B5Y-VO-IRb" firstAttribute="leading" secondItem="vM5-KH-fxn" secondAttribute="trailing" constant="8" id="sjo-RU-5Cv"/>
+                    <constraint firstItem="vM5-KH-fxn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="sl4-Ux-w3c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contactProfilePicture" destination="vM5-KH-fxn" id="DP8-Rx-kLs"/>
+                <outlet property="name" destination="Epi-DH-qfd" id="MLv-zA-inI"/>
+                <outlet property="phoneNumber" destination="MPH-IB-32J" id="eG5-Jv-XT7"/>
+            </connections>
+            <point key="canvasLocation" x="162.31884057971016" y="168.08035714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Profile-pic" width="300" height="300"/>
+    </resources>
+</document>
